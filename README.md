@@ -1,9 +1,9 @@
 # Snapcheck
 
-Snapcheck (`snapcheck.pl`) is a debugging tool you can use for games for
-which you have the source available.  In my particular case, I'm using the
-tool fo debugging games developed with my RAGE1 engine, but the tool is
-useful in other environments.
+Snapcheck (`snapcheck.pl`) is a debugging tool you can use for ZX Spectrum
+games for which you have the source available.  In my particular case, I'm
+using the tool fo debugging games developed with my RAGE1 engine, but the
+tool is useful in other environments.
 
 The scenario which this tool tries to improve is the following:
 
