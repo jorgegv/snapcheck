@@ -1,6 +1,6 @@
-# SNAPCHECK RULES
+# Snapcheck Rules
 
-## RULE FILE SYNTAX
+## Rule file syntax
 
 As usual:
 
@@ -20,14 +20,14 @@ REGISTER <register> BETWEEN <low_value> <high_value>
 BLOCK AT <address+/-offset> LENGTH <length> IS <value>
 ```
 
-- <type>:
+- `type`:
   - One of UINT8, UINT16, UINT32, INT8, INT16, INT32
   - BYTE is aliased to UINT8
   - WORD is aliased to UINT16
   - DWORD is aliased to UINT32
   - CHAR is aliased to INT8
 
-- <address+/-offset>:
+- `address+/-offset`:
   - Addresses can be specified in decimal or hex
   - Hex can be specified with 0x or $ prefixes
   - Offset must be specified with + or - right after the address (no space)
@@ -35,18 +35,18 @@ BLOCK AT <address+/-offset> LENGTH <length> IS <value>
   - Symbols can be used instead of an immediate address (symbols can come
   from a .MAP file or defined with a DEFINE rule)
 
-- <value>:
+- `value`:
   - Values can be specified in decimal or hex
   - Hex can be specified with 0x or $ prefixes
   - Symbols can be used instead of an immediate value (symbols can come
   from a .MAP file or defined with a DEFINE rule)
   - NULL is predefined to be 0x0000
 
-- <register>:
+- `register`:
   - One of: af bc de hl af1 bc1 de1 hl1 ix iy sp pc i r iff1 iff2 im
   - Some of those are pseudoregisters
 
-## EXAMPLE RULES
+## Example rules
 
 ```
 UINT8 AT 0xC000 IS 200
