@@ -13,10 +13,10 @@ As usual:
 INCLUDE <file>
 DEFINE <symbol> = <address+/-offset>
 <type> AT <address+/-offset> IS <value>
-<type> AT <address+/-offset> IS_NOT <value>
-<type> AT <address+/-offset> BETWEEN <low_value> <high_value>
+<type> AT <address+/-offset> IS NOT <value>
+<type> AT <address+/-offset> IS BETWEEN <low_value> AND <high_value>
 REGISTER <register> IS <value>
-REGISTER <register> BETWEEN <low_value> <high_value>
+REGISTER <register> IS BETWEEN <low_value> AND <high_value>
 BLOCK AT <address+/-offset> LENGTH <length> IS <value>
 ```
 
@@ -50,11 +50,11 @@ BLOCK AT <address+/-offset> LENGTH <length> IS <value>
 
 ```
 UINT8 AT 0xC000 IS 200
-BYTE AT game_state+12 BETWEEN 0 5
+BYTE AT game_state+12 BETWEEN 0 AND 5
 BLOCK AT 0xD000 LENGTH 257 IS 0xD1
 DEFINE int_vector_address 0xD1D1
 WORD AT int_vector_address+1 IS _isr_function
-WORD AT int_vector_address+1 IS_NOT NULL
+WORD AT int_vector_address+1 IS NOT NULL
 REGISTER IM IS 2
-REGISTER SP BETWEEN 0xD101 0xD1D0
+REGISTER SP BETWEEN 0xD101 AND 0xD1D0
 ```
